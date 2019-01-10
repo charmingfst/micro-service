@@ -6,6 +6,7 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
         <version>1.5.3.RELEASE</version> <!-- zuul当前最新版在SpringBoot2.x上启动时出现异常-->
+        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,10 +19,25 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.0.4.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -38,5 +54,11 @@
             <version>1.4.6.RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>

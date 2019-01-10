@@ -56,7 +56,9 @@ public class ServiceProvider {
     }
 
     public void closeTransport() {
-        transport.close();
+        if (transport!=null) {
+            transport.close();
+        }
     }
 
 }

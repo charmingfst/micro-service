@@ -20,5 +20,11 @@
         <module>api-gateway-zull</module>
     </modules>
 
+    <distributionManagement>
+        <repository>
+            <id>local</id>
+            <url>file:C:/Users/ason/.m2/repository/</url>
+        </repository>
+    </distributionManagement>
 
 </project>

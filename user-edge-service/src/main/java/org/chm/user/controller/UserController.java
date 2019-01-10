@@ -29,7 +29,8 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
-        return "/login";
+//        return "/login"; //IDEA中运行可以使用
+        return "login"; //使用java -jar xxx.jar命令启动运行时使用，与IDEA环境有所差别
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
