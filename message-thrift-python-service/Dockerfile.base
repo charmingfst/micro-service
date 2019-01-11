@@ -1,0 +1,4 @@
+FROM python:3.6
+MAINTAINER chm xxx@163.com
+# 先进入容器查看是否支持该命令
+RUN pip install thrift
